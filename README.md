@@ -28,6 +28,14 @@ Most lightning parameterization schemes rely on local approaches where the predi
 
 ## Installation
 
+### Python version
+
+This project targets **Python 3.10** (pinned in `.python-version`); `pyproject.toml`
+declares `requires-python = ">=3.10"`, so newer versions work for the portable install.
+`uv` reads the pin automatically and will fetch 3.10 if you don't have it. For the
+`pip install -r requirements.txt` path, use 3.10 specifically — that freeze was
+captured on 3.10 and its pinned wheels are not all available on newer versions.
+
 ### uv build (fastest)
 
 ```bash

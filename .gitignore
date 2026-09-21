@@ -3,6 +3,10 @@ __pycache__/
 *.egg-info/
 *.egg
 
+# Virtual environments
+.venv/
+venv/
+
 # Cache
 .cache/
 .mypy_cache/
