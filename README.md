@@ -1,4 +1,4 @@
-# From logistic regression to deep learning : machine learning modeling of lightnings in reanalysis data
+# From logistic regression to deep learning: machine learning modeling of lightning in ERA5 reanalysis data
 
 This repository is linked to this paper : https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4363/.
 

@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+title: >-
+  From logistic regression to deep learning: machine learning
+  modeling of lightning in ERA5 reanalysis data
+message: >-
+  If you use this software or the data samples in this
+  repository, please cite the associated paper below. Note
+  that channel 6 of the data samples derives from Met Office
+  ATDnet data released under CC-BY-SA 4.0; derivative work
+  including that channel must comply with those terms.
+type: software
+abstract: >-
+  Code, trained models and sample data for a study modeling
+  lightning occurrence over Europe from ERA5 reanalysis. A
+  deep convolutional neural network (U-Net) that processes
+  surrounding grid cells is compared against local
+  single-grid-cell models — logistic regression, generalized
+  additive model, extreme gradient boosting and multi-layer
+  perceptron — using 13 years of data and leave-one-year-out
+  cross-validation.
+authors:
+  - family-names: Burq
+    given-names: Adrien
+  - family-names: Vrac
+    given-names: Mathieu
+  - family-names: Jouhaud
+    given-names: Jean
+  - family-names: Xing
+    given-names: Victor
+  - family-names: Bouvier
+    given-names: Victor
+  - family-names: Forcadell
+    given-names: Vincent
+  - family-names: Taszarek
+    given-names: Mateusz
+  - family-names: Faranda
+    given-names: Davide
+repository-code: 'https://github.com/AdrienBq/lightning_modelling'
+license: MIT
+version: 0.1.0
+date-released: '2026-09-21'
+keywords:
+  - lightning
+  - deep learning
+  - U-Net
+  - convolutional neural network
+  - ERA5
+  - reanalysis
+  - atmospheric convection
+  - machine learning
+preferred-citation:
+  type: article
+  title: >-
+    From logistic regression to deep learning: machine learning
+    modeling of lightning in ERA5 reanalysis data
+  authors:
+    - family-names: Burq
+      given-names: Adrien
+    - family-names: Vrac
+      given-names: Mathieu
+    - family-names: Jouhaud
+      given-names: Jean
+    - family-names: Xing
+      given-names: Victor
+    - family-names: Bouvier
+      given-names: Victor
+    - family-names: Forcadell
+      given-names: Vincent
+    - family-names: Taszarek
+      given-names: Mateusz
+    - family-names: Faranda
+      given-names: Davide
+  journal: EGUsphere
+  publisher:
+    name: Copernicus GmbH
+  doi: 10.5194/egusphere-2026-4363
+  url: 'https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4363/'
+  year: 2026
+  month: 8
