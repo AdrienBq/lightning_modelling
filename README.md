@@ -2,6 +2,10 @@
 
 This repository is linked to this paper : https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4363/.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22875328.svg)](https://doi.org/10.5281/zenodo.22875328)
+
+An archived snapshot of this repository is available on Zenodo: [10.5281/zenodo.22875328](https://doi.org/10.5281/zenodo.22875328).
+
 ---
 
 ## Abstract
