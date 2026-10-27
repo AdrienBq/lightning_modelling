@@ -2,9 +2,14 @@
 
 This repository is linked to this paper : https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4363/.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22875328.svg)](https://doi.org/10.5281/zenodo.22875328)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22875327.svg)](https://doi.org/10.5281/zenodo.22875327)
 
-An archived snapshot of this repository is available on Zenodo: [10.5281/zenodo.22875328](https://doi.org/10.5281/zenodo.22875328).
+An archived snapshot of this repository is available on Zenodo: [10.5281/zenodo.22875327](https://doi.org/10.5281/zenodo.22875327). This DOI always resolves to the latest version; each version also has its own DOI, listed on the Zenodo page.
+
+### Versions
+
+- **v0.2.0** — models updated after the review of the paper. LR, GAM and XGB are retrained with the paper's lightning-hour definition (at least 2 flashes), XGB and MLP hyperparameters are tuned, and the climatology in `data/climatology` uses the same definition. The U-Net is unchanged. See [`models/README.md`](models/README.md).
+- **v0.1.0** — version of the preprint.
 
 ---
 
