@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 import torch
 import torch.nn as nn
 from abc import ABC, abstractmethod
@@ -352,6 +355,7 @@ class FullyConnectedNet_1d(nn.Module):
         self.h = kwargs.get("h", 101)
         self.w = kwargs.get("w", 149)
         self.hidden_dims = kwargs.get("hidden_dims", [256])
+        self.dropout = kwargs.get("dropout", 0.0)  # no dropout layer when 0
         input_dim = self.c
         output_dim = 1
 
@@ -360,6 +364,8 @@ class FullyConnectedNet_1d(nn.Module):
         for hidden_dim in self.hidden_dims:
             hidden_layers.append(nn.Linear(prev_dim, hidden_dim))
             hidden_layers.append(nn.ReLU())
+            if self.dropout > 0:
+                hidden_layers.append(nn.Dropout(self.dropout))
             prev_dim = hidden_dim
         hidden_layers.append(nn.Linear(prev_dim, output_dim))
         self.hidden_layers = nn.ModuleList(hidden_layers)
@@ -391,3 +397,25 @@ class FullyConnectedNet_1d(nn.Module):
             return out
         out = self.recalibration_layer(out)
         return out
+
+
+def load_mlp(model_dir, file_name, name=None, recalibration_method="platt_scaling"):
+    """Rebuild a saved MLP and load its weights, in eval mode.
+
+    The hidden layers and dropout were tuned, so they are read from
+    ``<file_name>_architecture.json`` next to the weights ``<file_name>.pth``.
+    """
+    model_dir = Path(model_dir)
+    with open(model_dir / f"{file_name}_architecture.json", "r") as f:
+        architecture = json.load(f)
+    model = FullyConnectedNet_1d(
+        name=name or file_name,
+        save_path=None,
+        recalibration_method=recalibration_method,
+        **architecture,
+    )
+    model.load_state_dict(
+        torch.load(model_dir / f"{file_name}.pth", map_location=torch.device("cpu"))
+    )
+    model.eval()
+    return model

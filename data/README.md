@@ -22,7 +22,7 @@ This folder contains netcdfs of the seasonal and yearly climatology of lightning
 
 The climatologies were computed on the training set which consists of the years 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021 and 2022.
 
-Each netcdf contains one map of average number of hours of lightning over the seasons (winter, spring, summer, autumn or year).
+Each netcdf contains one map of the frequency of lightning hours over the season (winter, spring, summer, autumn) or the year. A lightning hour is an hour with at least 2 flashes in the grid cell.
 
 > ATDnet data provided by the Met Office (2026) under a [CC-BY-SA license](https://creativecommons.org/licenses/by-sa/4.0/).
 
