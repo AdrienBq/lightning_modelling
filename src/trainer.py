@@ -8,7 +8,7 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 import time
 
-from lightning_modelling.metrics import Metrics
+from src.metrics import Metrics
 
 
 MiB = 1024**2

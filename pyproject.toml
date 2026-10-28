@@ -26,4 +26,4 @@ dependencies = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/lightning_modelling"]
+packages = ["src"]

@@ -6,7 +6,7 @@ import json
 import torch.nn.functional as F
 import xarray as xr
 
-from lightning_modelling.common_path import DATASET_PATH
+from src.common_path import DATASET_PATH
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
